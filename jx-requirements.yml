@@ -2,7 +2,7 @@ cluster:
   clusterName: ""
   environmentGitOwner: ""
   project: ""
-  provider: gke
+  provider: minikube
   zone: ""
 gitops: true
 environments:
@@ -10,10 +10,10 @@ environments:
 - key: staging
 - key: production
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: "s99.be"
+  externalDNS: true
   tls:
-    email: ""
+    email: "giese@b1-systems.de"
     enabled: false
     production: false
 kaniko: true
