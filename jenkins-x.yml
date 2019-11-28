@@ -9,6 +9,8 @@ pipelineConfig:
         - name: pr-checks
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
@@ -40,10 +42,20 @@ pipelineConfig:
         environment:
         - name: DEPLOY_NAMESPACE
           value: jx
+        - name: GIT_AUTHOR_NAME
+          value: mattiasgiese-b1
+        - name: GIT_COMMITTER_NAME
+          value: mattiasgiese-b1
+        - name: GIT_AUTHOR_EMAIL
+          value: giese@b1-systems.de
+        - name: GIT_COMMITTER_EMAIL
+          value: giese@b1-systems.de
         stages:
         - name: release
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
