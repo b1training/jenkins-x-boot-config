@@ -1,8 +1,8 @@
 cluster:
-  clusterName: ""
+  clusterName: "b1demo"
   environmentGitOwner: ""
   project: ""
-  provider: minikube
+  provider: kubernetes
   zone: ""
 gitops: true
 environments:
