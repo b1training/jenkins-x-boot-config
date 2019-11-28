@@ -34,34 +34,6 @@ cluster:
   namespace: jx
   provider: kubernetes
   registry: docker.io
-environments:
-- ingress:
-    domain: ""
-    externalDNS: false
-    namespaceSubDomain: -jx.
-    tls:
-      email: giese@b1-systems.de
-      enabled: false
-      production: false
-  key: dev
-- ingress:
-    domain: ""
-    externalDNS: false
-    namespaceSubDomain: ""
-    tls:
-      email: ""
-      enabled: false
-      production: false
-  key: staging
-- ingress:
-    domain: ""
-    externalDNS: false
-    namespaceSubDomain: ""
-    tls:
-      email: ""
-      enabled: false
-      production: false
-  key: production
 repository: nexus
 secretStorage: local
 storage:
