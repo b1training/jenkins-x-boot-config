@@ -10,6 +10,7 @@ environments:
 - key: staging
 - key: production
 ingress:
+  ignoreLoadBalancer: true
   domain: "5.9.20.30.nip.io"
   externalDNS: false
   tls:
