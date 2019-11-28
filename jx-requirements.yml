@@ -10,7 +10,7 @@ environments:
 - key: staging
 - key: production
 ingress:
-  domain: ""
+  domain: "5.9.20.30.nip.io"
   externalDNS: false
   tls:
     email: "giese@b1-systems.de"
@@ -60,8 +60,6 @@ environments:
       enabled: false
       production: false
   key: production
-gitops: true
-kaniko: true
 repository: nexus
 secretStorage: local
 storage:
