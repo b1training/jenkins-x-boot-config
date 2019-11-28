@@ -1,6 +1,7 @@
 cluster:
   clusterName: "b1demo"
   environmentGitOwner: "mattiasgiese-b1"
+  environmentGitPublic: false
   project: ""
   provider: kubernetes
   zone: ""
