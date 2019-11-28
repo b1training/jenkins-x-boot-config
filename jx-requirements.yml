@@ -14,7 +14,7 @@ cluster:
 environments:
 - ingress:
     domain: s99.be
-    externalDNS: true
+    externalDNS: false
     namespaceSubDomain: -jx.
     tls:
       email: giese@b1-systems.de
