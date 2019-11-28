@@ -61,14 +61,6 @@ environments:
       production: false
   key: production
 gitops: true
-ingress:
-  domain: ""
-  externalDNS: true
-  namespaceSubDomain: -jx.
-  tls:
-    email: giese@b1-systems.de
-    enabled: true
-    production: false
 kaniko: true
 repository: nexus
 secretStorage: local
