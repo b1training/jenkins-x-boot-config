@@ -10,8 +10,8 @@ environments:
 - key: staging
 - key: production
 ingress:
-  domain: "s99.be"
-  externalDNS: true
+  domain: ""
+  externalDNS: false
   tls:
     email: "giese@b1-systems.de"
     enabled: false
