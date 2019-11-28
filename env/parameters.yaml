@@ -1,0 +1,15 @@
+adminUser:
+  password: local:b1demo/adminUser:password
+  username: admin
+docker:
+  email: giese@b1-systems.de
+  password: local:b1demo/docker:password
+  url: https://index.docker.io/v1/
+  username: mattiasgieseb1
+enableDocker: true
+pipelineUser:
+  email: giese@b1-systems.de
+  token: local:b1demo/pipelineUser:token
+  username: mattiasgiese-b1
+prow:
+  hmacToken: local:b1demo/prow:hmacToken

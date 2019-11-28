@@ -1,6 +1,6 @@
 cluster:
   clusterName: "b1demo"
-  environmentGitOwner: ""
+  environmentGitOwner: "mattiasgiese-b1"
   project: ""
   provider: kubernetes
   zone: ""
@@ -19,6 +19,63 @@ ingress:
 kaniko: true
 secretStorage: local
 storage:
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: git@github.com:b1training/jenkins-x-boot-config.git
+cluster:
+  clusterName: b1demo
+  environmentGitOwner: mattiasgiese-b1
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  provider: kubernetes
+  registry: docker.io
+environments:
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: giese@b1-systems.de
+      enabled: false
+      production: false
+  key: dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+gitops: true
+ingress:
+  domain: ""
+  externalDNS: true
+  namespaceSubDomain: -jx.
+  tls:
+    email: giese@b1-systems.de
+    enabled: true
+    production: false
+kaniko: true
+repository: nexus
+secretStorage: local
+storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: false
     url: ""
@@ -28,7 +85,9 @@ storage:
   repository:
     enabled: false
     url: ""
+vault: {}
+velero: {}
 versionStream:
-  ref: "master"
-  url: https://github.com/jenkins-x/jenkins-x-versions.git
+  ref: master
+  url: git@github.com:b1training/jenkins-x-versions.git
 webhook: prow
